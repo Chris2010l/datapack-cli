@@ -4,7 +4,7 @@ A lightning-fast, JSON-driven Minecraft datapack generator written in Go.
 
 ## Installation
 
-Make sure you have [Go](https://go.dev) installed, then run:
+Make sure you have [Go](https://go.dev) and [git](https://git-scm.com/install/) installed, then run:
 
 ```bash
 git clone https://github.com/Chris2010l/datapack-cli.git
