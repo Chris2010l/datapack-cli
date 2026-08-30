@@ -7,7 +7,8 @@ A lightning-fast, JSON-driven Minecraft datapack generator written in Go.
 Make sure you have [Go](https://go.dev) installed, then run:
 
 ```bash
-go install ://github.com
+git clone 
+go install .
 ```
 
 ## Usage
