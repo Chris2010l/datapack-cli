@@ -42,7 +42,7 @@ func generateLevel(currentPath string, nodes map[string]Node) error {
 					return err
 				}
 			} else {
-				fmt.Printf("Creating Folder: %s\n", fullPath)
+				fmt.Printf("Creating Path: %s\n", fullPath)
 				if err := os.MkdirAll(fullPath, 0755); err != nil {
 					return err
 				}

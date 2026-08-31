@@ -4,10 +4,6 @@ import "bytes"
 
 func ReplaceJsonToUserJson(user_options map[string]string, default_json []byte) ([]byte, error) {
 	for placeholder, value := range user_options {
-		if placeholder == "&NAME" {
-			continue
-		}
-
 		if placeholder == "&FORMAT" {
 			oldBytes := []byte(`"` + placeholder + `"`)
 			newBytes := []byte(value)

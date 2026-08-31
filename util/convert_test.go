@@ -6,9 +6,9 @@ import (
 )
 
 func TestReplaceJsonToUserJson(t *testing.T) {
-	mockDefaultJson := []byte(`{"pack": "&FORMAT"}, "name-to-skip": "&NAME", "description": "&DESCRIPTION", "namespace": "&NAMESPACE"`)
+	mockDefaultJson := []byte(`{"pack": "&FORMAT"}, "name": "&DATAPACK", "description": "&DESCRIPTION", "namespace": "&NAMESPACE"`)
 	mockUserOptions := map[string]string{
-		"&NAME":        "My cool datapack",
+		"&DATAPACK":    "My cool datapack",
 		"&FORMAT":      "117",
 		"&DESCRIPTION": "Anoy my friends!!!",
 		"&NAMESPACE":   "dp",
@@ -23,16 +23,16 @@ func TestReplaceJsonToUserJson(t *testing.T) {
 		t.Error("Error &FORMAT wasnt replaced")
 	}
 
-	if bytes.Contains(resultJson, []byte("My cool datapack")) {
-		t.Error("Name wasnt skipped")
+	if !bytes.Contains(resultJson, []byte("My cool datapack")) {
+		t.Error("Name was skipped")
 	}
 
 	if !bytes.Contains(resultJson, []byte("Anoy my friends!!!")) {
-		t.Error("Description wasnt replaced ot was skipped")
+		t.Error("Description wasnt replaced or was skipped")
 	}
 
 	if !bytes.Contains(resultJson, []byte("dp")) {
-		t.Error("Namespace wasnt replaced ot was skipped")
+		t.Error("Namespace was replaced")
 	}
 
 	t.Log(string(resultJson))

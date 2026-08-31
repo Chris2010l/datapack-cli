@@ -20,7 +20,7 @@ func GetUserInputs() map[string]string {
 		return ""
 	}
 
-	user_inputs["&NAME"] = ask("What name should be used for the datapack?")
+	user_inputs["&DATAPACK"] = ask("What name should be used for the datapack?")
 	user_inputs["&NAMESPACE"] = ask("What namespace should be used for the datapack?")
 	user_inputs["&FORMAT"] = ask("What datapack format should be used for the datapack?")
 	user_inputs["&DESCRIPTION"] = ask("What datapack description should be used for the datapack?")
