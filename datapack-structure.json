@@ -2,6 +2,10 @@
   "&DATAPACK": {
     "isFolder": true,
     "content": {
+      ".git": {
+        "isFolder": false,
+        "content": {}
+      },
       "data": {
         "isFolder": true,
         "content": {
