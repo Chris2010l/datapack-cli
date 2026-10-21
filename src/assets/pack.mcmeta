@@ -1,12 +1,13 @@
-"pack": {
-  "description": "&DESCRIPTION",
-  "min_format": [
-    "&FORMAT",
-    1
-  ],
-  "max_format": [
-    "&FORMAT",
-    1
-  ]
+{
+  "pack": {
+    "description": "&DESCRIPTION",
+    "min_format": [
+      "&FORMAT",
+      1
+    ],
+    "max_format": [
+      "&FORMAT",
+      1
+    ]
+  }
 }
-
