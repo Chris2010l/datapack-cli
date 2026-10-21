@@ -2,7 +2,7 @@
 package: main
 
 steps:
-  - goto: "./&DATAPACK/data/tags/function"
+  - goto: "./&DATAPACK/data/minecraft/tags/function"
 
   - create:
       - path: "load.json"
@@ -27,7 +27,7 @@ steps:
       - path: "test/"
         type: folder
 
-  - goto: "../../../"
+  - goto: "../../../../"
 
   - create:
       - path: "pack.mcmeta"
