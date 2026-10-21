@@ -1,12 +1,11 @@
-package util
+package src
 
 import (
 	"bytes"
 	"testing"
 )
 
-func TestReplaceJsonToUserJson(t *testing.T) {
-	mockDefaultJson := []byte(`{"pack": "&FORMAT"}, "name": "&DATAPACK", "description": "&DESCRIPTION", "namespace": "&NAMESPACE"`)
+func TestReplaceYamlWithUserInputs(t *testing.T) {
 	mockUserOptions := map[string]string{
 		"&DATAPACK":    "My cool datapack",
 		"&FORMAT":      "117",
@@ -14,7 +13,7 @@ func TestReplaceJsonToUserJson(t *testing.T) {
 		"&NAMESPACE":   "dp",
 	}
 
-	resultJson, err := ReplaceJsonToUserJson(mockUserOptions, mockDefaultJson)
+	resultJson, err := ReplaceYamlWithUserInputs(mockUserOptions)
 	if err != nil {
 		t.Fatalf("Err: %s", err)
 	}

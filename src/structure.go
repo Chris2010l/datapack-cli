@@ -1,6 +1,7 @@
-package util
+package src
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -12,10 +13,11 @@ func GetDataStructure() ([]byte, error) {
 		return nil, os.ErrNotExist
 	}
 	base_dir := filepath.Dir(filename)
-	absoulte_path := filepath.Join(base_dir, "../datapack-structure.json")
+	absoulte_path := filepath.Join(base_dir, "./assets/_main.yml")
 
 	bytes, err := os.ReadFile(absoulte_path)
 	if err != nil {
+		fmt.Printf("%s", err)
 		return nil, err
 	}
 

@@ -1,17 +1,16 @@
 package main
 
 import (
-	"github.com/Chris2010l/datapack-cli/util"
+	"github.com/Chris2010l/datapack-cli/src"
 )
 
 func main() {
-	user_inputs := util.GetUserInputs()
-	data_structure, err := util.GetDataStructure()
+	user_inputs := src.GetUserInputs()
+	data_structure, err := src.GetDataStructure()
 	if err != nil {
 		return
 	}
 
-	data_structure, err = util.ReplaceJsonToUserJson(user_inputs, data_structure)
-
-	util.GenerateFolderStructure(user_inputs, data_structure)
+	data_structure, err = src.ReplaceYamlWithUserInputs(user_inputs)
+	src.GenerateFolderStructure(user_inputs, data_structure)
 }

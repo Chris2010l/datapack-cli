@@ -1,0 +1,39 @@
+---
+package: main
+
+steps:
+  - goto: "./&DATAPACK/data/tags/function"
+
+  - create:
+      - path: "load.json"
+        type: file
+        import: "load.json"
+
+      - path: "tick.json"
+        type: file
+        import: "tick.json"
+  - goto: "../../&NAMESPACE/function"
+
+  - create:
+
+      - path: "load.mcfunction"
+        type: file
+        import: "./load.mcfunction"
+
+      - path: "tick.mcfunction"
+        type: file
+        import: "./tick.mcfunction"
+
+      - path: "test/"
+        type: folder
+
+  - goto: "../../../"
+
+  - create:
+      - path: "pack.mcmeta"
+        type: file
+        import: "./pack.mcmeta"
+        
+      - path: "spyglass.json"
+        type: file
+        import: "./spyglass.json"
