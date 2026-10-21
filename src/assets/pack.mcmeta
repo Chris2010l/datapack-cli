@@ -1,5 +1,4 @@
 "pack": {
-  "pack_format": "&FORMAT",
   "description": "&DESCRIPTION",
   "min_format": [
     "&FORMAT",
