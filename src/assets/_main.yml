@@ -12,7 +12,7 @@ steps:
       - path: "tick.json"
         type: file
         import: "tick.json"
-  - goto: "../../&NAMESPACE/function"
+  - goto: "../../../&NAMESPACE/function"
 
   - create:
 
@@ -27,7 +27,7 @@ steps:
       - path: "test/"
         type: folder
 
-  - goto: "../../../../"
+  - goto: "../../../"
 
   - create:
       - path: "pack.mcmeta"
